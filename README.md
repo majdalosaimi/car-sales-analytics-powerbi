@@ -7,8 +7,8 @@ The goal of this dashboard is to empower decision-makers with actionable insight
 
 ---
 ## 📊 Dashboard Preview
-![Dashboard Overview](screenshots/overview_dashboard.png)
-![Dashboard Overview](screenshots/details_dashboard.png)
+![Dashboard Overview](dashboards/overview_dashboard.png)
+![Dashboard Overview](dashboards/details_dashboard.png)
 
 **Key Dashboard Features:**
 
@@ -52,3 +52,10 @@ Based on the dashboard analysis, here are the most critical business takeaways:
 ### 4. Consumer Preferences
 * **Color Preference:** **Pale White** is by far the most preferred car color, dominating the sales share over Black and Red.
 * **Body Style:** **SUVs**, **Sedans**, and **Hatchbacks** make up the vast majority of the sales volume compared to hardtops or passenger vans.
+
+
+## 📁 Repository Structure
+* `/data`: Contains the source dataset used for the visualization.
+* `/assets`: Includes custom icons and background layouts.
+* `/dashboards`: Images of the finished dashboard pages.
+* `car-sales-dashboard.pbix`: The main packaged Power BI workbook.
