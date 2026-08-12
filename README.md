@@ -58,8 +58,8 @@ Key Performance Indicators (YTD)
 ### Strategic Recommendations:
 1. **Capitalize on Seasonality Peaks:** Sales volume hits a historical peak during Week 35 ($14.9M). Dealerships should align trade-in campaigns and marketing budgets 3–4 weeks prior to maximize high-conversion periods.
 2. **Optimize Inventory Mix by Regional Demand:**
-* **Austin** and **Janesville** hubs demonstrate the highest sales volume density. Prioritize SUV and Sedan inventory shipments to these locations.
-* Allocate luxury inventory (**Cadillac at $42.2K ASP**) specifically to high-margin regional dealerships to reduce holding days.
+   * **Austin** and **Janesville** hubs demonstrate the highest sales volume density. Prioritize SUV and Sedan inventory shipments to these locations.
+   * Allocate luxury inventory (**Cadillac at $42.2K ASP**) specifically to high-margin regional dealerships to reduce holding days.
 3. **Double-Down on High-Performing Brands:** **Chevrolet ($27.1M)** and Dodge ($25.0M) contribute over 14% of total sales revenue. Secure stronger distributor allotments for these core volume drivers.
 4. **Color & Body Style Alignment:** **Pale White** is the dominant consumer choice across all body styles. Ensure manufacturing/dealer orders reflect a minimum 40% allocation to white exterior finishes.
 
