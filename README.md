@@ -51,8 +51,11 @@ Without automated reporting, leadership faced delayed strategic decision-making 
 ## Results & Business Recommendations
 
 Key Performance Indicators (YTD)
+
 ├── Revenue: $371.2M (+23.59% YoY)
+
 ├── Volume:  13.3K Units (+24.57% YoY)
+
 └── ASP:     $28.0K (-0.79% YoY)
 
 ### Strategic Recommendations:
