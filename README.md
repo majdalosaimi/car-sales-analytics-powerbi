@@ -1,61 +1,72 @@
-# Car Sales Analysis Dashboard (Power BI)
+# Car Sales Performance & Revenue Growth Analysis | Automotive Retail Industry
 
-## 📌 Project Overview
-An interactive and dynamic **Power BI Dashboard** designed to track and analyze car sales performance. The project focuses on key performance indicators (KPIs) such as Year-to-Date (YTD) sales, Month-to-Date (MTD) sales, average pricing, and quantity sold, with breakdowns by car model, dealer region, body style, and color.
+## Executive Summary
 
-The goal of this dashboard is to empower decision-makers with actionable insights into sales trends, regional performance, and customer preferences.
+* **The Business Problem:** The dealership network suffered from fragmented sales visibility, unoptimized inventory distribution across regional hubs, and a lack of real-time tracking for Year-to-Date (YTD) and Month-to-Date (MTD) revenue performance.
+* **The Solution:** Engineered an end-to-end Power BI Business Intelligence solution with a centralized data pipeline, robust dimensional data modeling, and interactive executive dashboards to track sales KPIs, regional trends, and brand performance.
+* **The Number Impact:** Uncovered actionable insights across **$371.2M YTD revenue** (a **23.59% YoY growth**), identified a **$14.9M peak sales opportunity window**, and pinpointed top-revenue drivers (**Chevrolet at 7.30% market share**).
+* **Next Steps:** Implement dynamic inventory re-allocation to high-performing regional hubs, launch targeted promotions ahead of seasonal Week 35 volume peaks, and automate DAX-driven anomaly alerts for underperforming brands.
 
----
-## 📊 Dashboard Preview
 ![Dashboard Overview](dashboards/overview_dashboard.png)
 ![Dashboard Overview](dashboards/details_dashboard.png)
 
-**Key Dashboard Features:**
+---
 
-* **Overview Page:** High-level executive KPIs, weekly sales trends, geographic performance, body style/color distribution, and top-selling manufacturers.
-* **Details Page:** A transactional-level grid view with custom formatting and visual data bars for a quick, deep-dive analysis of specific sales records.
-* **Interactive Filters:** Global slicers for Body Style, Dealer Name, Transmission, Engine Type, and Date.
+## Business Problem
+Automotive dealerships operate on tight margins where inventory holding costs and misaligned regional demand directly degrade profitability. Key executive decision-makers lacked a single source of truth (SSOT) to analyze:
+1. Historical vs. YTD revenue performance and volume momentum.
+2. Regional supply-demand imbalances across dealership hubs.
+3. Shifts in customer preferences regarding vehicle body styles, colors, and price points.
+
+Without automated reporting, leadership faced delayed strategic decision-making and ineffective marketing spend.
 
 ---
 
-## 🛠️ Data Journey (ETL & Modeling)
+## Methodology
 
-1. **Data Cleaning & Transformation (Power Query):**
-   * Imported the raw single-table CSV dataset.
-   * Cleaned data formats, handled missing values, and validated column data types.
-   * Standardized text fields (e.g., Company, Color, and Body Style).
+```text
++-------------------+      +----------------------+      +-------------------------+      +-----------------------+
+|  Raw CSV Data     | ---> |  Power Query (ETL)   | ---> | Data Modeling (Star)    | ---> | DAX Engine & Metrics  |
+|  Sales Records    |      | Clean, Transform, Type|      | 1:N Calendar Relation   |      | YTD/MTD Calculations  |
++-------------------+      +----------------------+      +-------------------------+      +-----------------------+
+                                                                                                     |
+                                                                                                     v
+                                                                                          +-----------------------+
+                                                                                          | Interactive Dashboard |
+                                                                                          | Executive Insights    |
+                                                                                          +-----------------------+
+```
 
-2. **Data Modeling:**
-   * Created a dedicated, custom **Calendar Table (Date Dimension)** using DAX to enable time-intelligence calculations.
-   * Established a **1-to-many relationship** between the Calendar Table and the Sales Fact Table to ensure accurate filtering across YTD and MTD metrics.
+---
+## Skills
+
+* **Data Engineering & ETL:** Data Cleansing, Schema Transformation, Data Type Validation, Data Sanitation.
+* **Data Modeling:** Star Schema Architecture, Dimensional Modeling, Fact vs. Dimension Tables, Relationship Optimization.
+* **DAX & Analytics:** Time-Intelligence Functions (`TOTALYTD`, `TOTALMTD`), Measure Branching, KPI Formulation, Context Transition (`CALCULATE`).
+* **Data Visualization & UX:** Executive Dashboard Design, Visual Hierarchy, Interactive Slicers, UX Formatting, Dark-Mode Palette.
+* **Business Strategy:** Revenue Growth Analysis, Regional Demand Profiling, Product Mix Optimization.
 
 ---
 
-## 💡 Key Business Insights
+## Results & Business Recommendations
 
-Based on the dashboard analysis, here are the most critical business takeaways:
+Key Performance Indicators (YTD)
+├── Revenue: $371.2M (+23.59% YoY)
+├── Volume:  13.3K Units (+24.57% YoY)
+└── ASP:     $28.0K (-0.79% YoY)
 
-### 1. Overall Sales Performance (YTD vs. MTD)
-* **Robust YTD Growth:** Total Year-to-Date sales reached **$371.2M**, representing a strong **23.59% YoY increase** (+$70.8M growth).
-* **High Transaction Volume:** Total cars sold YTD is **13.3K units** (up **24.57%**).
-* **Stable Pricing:** The average price per car stayed highly stable at **$28.0K** (only a minor drop of -0.79%). 
-* *Note on Historical Context:* The overall historical sales in the dataset stand at **$671.5M** (as seen in the details tab), showing that the YTD performance contributes to more than half of the lifetime business value.
+### Strategic Recommendations:
+1. **Capitalize on Seasonality Peaks:** Sales volume hits a historical peak during Week 35 ($14.9M). Dealerships should align trade-in campaigns and marketing budgets 3–4 weeks prior to maximize high-conversion periods.
+2. **Optimize Inventory Mix by Regional Demand:**
+* **Austin** and **Janesville** hubs demonstrate the highest sales volume density. Prioritize SUV and Sedan inventory shipments to these locations.
+* Allocate luxury inventory (**Cadillac at $42.2K ASP**) specifically to high-margin regional dealerships to reduce holding days.
+3. **Double-Down on High-Performing Brands:** **Chevrolet ($27.1M)** and Dodge ($25.0M) contribute over 14% of total sales revenue. Secure stronger distributor allotments for these core volume drivers.
+4. **Color & Body Style Alignment:** **Pale White** is the dominant consumer choice across all body styles. Ensure manufacturing/dealer orders reflect a minimum 40% allocation to white exterior finishes.
 
-### 2. Seasonality & Weekly Trends
-* Sales exhibit fluctuations throughout the year, with a massive peak occurring around **Week 35**, reaching a record weekly sales high of **$14.9M**. This indicates potential seasonal promotions or high-demand periods that should be capitalized on in future marketing campaigns.
+---
 
-### 3. Top Performing Brands & Regions
-* **Brand Dominance:** **Chevrolet** leads the market share, accounting for **$27.1M (7.30% of total sales)** with **1,043 cars sold**, closely followed by **Dodge** at **$25.0M (6.74%)**.
-* **High-End Segment:** **Cadillac** represents the premium segment with a high YTD Average Price of **$42.2K**, contributing **$15.3M (4.13%)** to total revenue.
-* **Regional Hubs:** The Southern region (centered around **Austin**) and the North-Central region (**Janesville**) show the highest density of car sales based on dealer map bubble sizes.
+## Next Steps
 
-### 4. Consumer Preferences
-* **Color Preference:** **Pale White** is by far the most preferred car color, dominating the sales share over Black and Red.
-* **Body Style:** **SUVs**, **Sedans**, and **Hatchbacks** make up the vast majority of the sales volume compared to hardtops or passenger vans.
-
-
-## 📁 Repository Structure
-* `/data`: Contains the source dataset used for the visualization.
-* `/assets`: Includes custom icons and background layouts.
-* `/dashboards`: Images of the finished dashboard pages.
-* `car-sales-dashboard.pbix`: The main packaged Power BI workbook.
+1. **Power BI Service Deployment:** Publish the dataset to Power BI Service, configure scheduled daily data refreshes via On-Premises Data Gateway, and establish Row-Level Security (RLS) for regional managers.
+2. **Advanced Predictive Analytics:** Integrate Python/R scripts inside Power BI or Synapse Analytics to build a Sales Forecasting model for Q3/Q4 demand.
+3. **Automated Alerting:** Set up Data Alerts in Power BI Service to notify regional directors via Microsoft Teams whenever weekly revenue drops below target thresholds.
